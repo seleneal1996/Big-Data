@@ -129,7 +129,7 @@ $hadoop jar invertedindex.jar InvertedIndex /user/hduser/lab02/fulldata /user/hd
 ## Integrantes
 - Barrios Cornejo, Selene
 - Fernandez Mamani, Brayan Gino
-- Ccari Quispe ,Jose
+- Ccari Quispe, Jose
 
 
 
