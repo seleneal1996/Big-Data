@@ -124,7 +124,12 @@ $ jar cf invertedindex.jar InvertedIndex*.class
 Usa el siguiente comando:
 ```bash
 $hadoop jar invertedindex.jar InvertedIndex /user/hduser/lab02/fulldata /user/hduser/lab02/output_fulldata
-```bash
+```
+
+## Integrantes
+- Barrios Cornejo, Selene
+- Fernandez Mamani, Brayan Gino
+- Ccari Quispe ,Jose
 
 
 
