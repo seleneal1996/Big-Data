@@ -5,6 +5,22 @@
 
 ###
 
+# LABORATORIO 3: HADOOP
+
+El siguiente laboratorio se dividio en 3 tareas:
+- Instalación y configuración del cluster
+- Índice invertido  
+- Seguridad
+
+## SIMULACIÓN DEL CLUSTER
+
+La simulación realizada es con docker donde se ejecutara 4 nodos Arquitectura de Hadoop
+
+- Almacenamiento distribuido: HDFS
+- Planificación de tareas y negociación de recursos: YARN
+- Procesamiento distribuido: MapReduce
+
+Usaremos contenedores Docker como máquinas virtuales con bajo overhead
 
 ### Instalación base de Hadoop con Docker
 
@@ -21,11 +37,11 @@
 ### Creación de la imagen para el NameNode
 - Examina también los ficheros dentro de la carpeta
 ```bash
-  Hadoop_cluster/NameNode/Config-files
+  $Hadoop_cluster/NameNode/Config-files
 ```
 - Abrir un terminal en la carpeta NameNode/ y construye la imagen del NameNode ejecutando:
 ```bash
-  docker build -t namenode-image 
+  $docker build -t namenode-image 
 ```
 - Una vez construida, puedes verla en el Docker Desktop o ejecutando:
 docker image ls
@@ -33,17 +49,17 @@ docker image ls
 ### Ejecución del servidor NameNode
 - Crear la red que conectará los contenedores ejecutando:
 ```bash
-  docker network create hadoop-net
+  $docker network create hadoop-net
 ```
 - Se puede ver la red creada con: 
 
 ```bash
-  docker network inspect hadoop-net
+  $docker network inspect hadoop-net
 ```
 - Iniciar un contenedor corriendo el servicio NameNode con:
 
 ```bash
-  docker container run --rm --init --detach --name namenode --network=hadoop-net --hostname namenode -p 9870:9870 namenode-image
+  $docker container run --rm --init --detach --name namenode --network=hadoop-net --hostname namenode -p 9870:9870 namenode-image
 ```
 
 ### Creación de la imagen para el ResourceManager
@@ -51,18 +67,18 @@ docker image ls
 - Construir la imagen del ResourceManager ejecutando:
 
 ```bash
-  docker build -t resourcemanager-image 
+  $docker build -t resourcemanager-image 
 ```
 - Una vez construida, puedes verla en el Docker Desktop o ejecutando:
 ```bash
-  docker image ls
+  $docker image ls
 ```
 ### Ejecución del servidor ResourceManager
 
 - Inicia un contenedor corriendo el servicio ResourceManager con:
 
 ```bash
-  docker container run --rm --init --detach --name resourcemanager
+$docker container run --rm --init --detach --name resourcemanager
 --network=hadoop-net --hostname resourcemanager -p 8088:8088
 resourcemanager-image
 ```
@@ -72,11 +88,46 @@ resourcemanager-image
 
 - Iniciar cuatro contenedores corriendo los servicios DataNode/NodeManager con
 ```bash
-docker container run --rm --init --detach --name dnnm1 --network=hadoop-net --hostname dnnm1 dnnm-image
-docker container run --rm --init --detach --name dnnm2 --network=hadoop-net --hostname dnnm2 dnnm-image
-docker container run --rm --init --detach --name dnnm3 --network=hadoop-net --hostname dnnm3 dnnm-image
+$docker container run --rm --init --detach --name dnnm1 --network=hadoop-net --hostname dnnm1 dnnm-image
+$docker container run --rm --init --detach --name dnnm2 --network=hadoop-net --hostname dnnm2 dnnm-image
+$docker container run --rm --init --detach --name dnnm3 --network=hadoop-net --hostname dnnm3 dnnm-image
 ```
 Acceder a los interfaces web del NameNode y del ResourceManager y comprobar que se han registrado los 4 workers
+
+## ÍNDICE INVERTIDO DE BIGRAMAS
+El objetivo de esta tarea es generar un índice invertido que mapee cada bigrama a una lista de documentos donde aparece junto con la frecuencia de aparición en cada documento. Este enfoque utiliza el paradigma MapReduce para procesar eficientemente grandes conjuntos de datos distribuidos.
+
+### Crear directorios en HDFS
+```bash
+$hdfs dfs -mkdir /user/hduser             
+$hdfs dfs -mkdir /user/hduser/lab02   
+$hdfs dfs -ls /user/hduser/	               
+```
+### Ejecutar la primera tarea
+En tu usuario hadoop
+```bash
+export JAVA_HOME=/usr/java/latest
+export PATH=${JAVA_HOME}/bin:${PATH}
+export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+```
+En tu terminal
+```bash
+$start-dfs.sh
+$start-yarn.sh
+```
+Para enviar el trabajo de Hadoop, la implementación de MadReduce debe empaquetarse como un archivo jar. Para hacerlo, se copia el archivo InvertedIndex.java de este proyecto en la carpeta raíz de distribución de Hadoop y, mientras aún está allí, ejecuta los siguientes comandos para compilar InvertedIndex.java y crear un archivo jar.
+```bash
+$ hadoop com.sun.tools.javac.Main InvertedIndex.java
+$ jar cf invertedindex.jar InvertedIndex*.class
+```
+### Generar resultados
+Usa el siguiente comando:
+```bash
+$hadoop jar invertedindex.jar InvertedIndex /user/hduser/lab02/fulldata /user/hduser/lab02/output_fulldata
+```bash
+
+
+
 
 
 
