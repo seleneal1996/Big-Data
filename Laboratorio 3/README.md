@@ -159,6 +159,10 @@ jar cf PasswordChecker.jar PasswordChecker*.class
 ```bash
 hadoop jar PasswordChecker.jar PasswordChecker /user/hduser/lab02/pwnedPass/inputFilePass.txt /user/hduser/lab02/pwnedPass/inputText.txt /user/hduser/lab02/results03
 ```
+<div align="center">
+  <img height="200" src="https://github.com/seleneal1996/Big-Data/blob/main/Laboratorio%203/resultados/Screenshot%20from%202023-07-09%2021-10-21.png
+"  />
+</div>
 ### Linea de comando
 
 - `hadoop jar`: Indica que se va a ejecutar un programa Hadoop en el clúster.
