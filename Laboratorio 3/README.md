@@ -160,6 +160,11 @@ hadoop jar PasswordChecker.jar PasswordChecker /user/hduser/lab02/pwnedPass/inpu
 - `/user/hduser/lab02/pwnedPass/inputText.txt`: Es la ruta del archivo de entrada que contiene las contraseñas a verificar.
 - `/user/hduser/lab02/results03`: Es la ruta del directorio de salida donde se almacenarán los resultados del procesamiento.
 
+### Visualizar resultados
+Como se procesa data grande, el archivo de salido es pesado al abrirse asi que se usa el comando:
+```bash
+hdfs dfs -cat /user/hduser/lab02/archivo_salida/*
+```
 ## Integrantes
 - Barrios Cornejo, Selene
 - Fernandez Mamani, Brayan Gino
