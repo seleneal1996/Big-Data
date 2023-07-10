@@ -26,7 +26,7 @@ Usaremos contenedores Docker como máquinas virtuales con bajo overhead
 
 - Iniciar el Docker Desktop
 <div align="center">
-  <img height="150" src="https://drive.google.com/file/d/1OdvSHB2JeKwHlPgklIz1M2UvUfvhAbzU/view?usp=drive_link"  />
+  <img height="150" src="https://drive.google.com/file/d/1OdvSHB2JeKwHlPgklIz1M2UvUfvhAbzU/view?usp=sharing"  />
 </div>
 - Abre un terminal en esa carpeta y construye la imagen ejecutando
 ```bash
@@ -37,9 +37,7 @@ Usaremos contenedores Docker como máquinas virtuales con bajo overhead
 ```bash
   $docker image ls
 ```
-<div align="center">
-  <img height="150" src="https://drive.google.com/file/d/1gYbc82rgzOOU0U1zRL0EZXiHkgDN7jhx/view?usp=drive_link"  />
-</div>
+
 ### Creación de la imagen para el NameNode
 - Examina también los ficheros dentro de la carpeta
 ```bash
@@ -89,7 +87,9 @@ $docker container run --rm --init --detach --name resourcemanager
 resourcemanager-image
 ```
 - Accede al interfaz web del ResourceManager en http://localhost:8088
-
+<div align="center">
+  <img height="150" src="https://drive.google.com/file/d/1gYbc82rgzOOU0U1zRL0EZXiHkgDN7jhx/view?usp=sharing"  />
+</div>
 ### Ejecución de los DataNodes/NodeManagers
 
 - Iniciar cuatro contenedores corriendo los servicios DataNode/NodeManager con
@@ -100,10 +100,10 @@ $docker container run --rm --init --detach --name dnnm3 --network=hadoop-net --h
 ```
 Acceder a los interfaces web del NameNode y del ResourceManager y comprobar que se han registrado los 4 workers
 <div align="center">
-  <img height="150" src="https://drive.google.com/file/d/1_DGu--sR9e3zk5KfEgiABvp3GZ5hhaec/view?usp=drive_link"  />
+  <img height="150" src="https://drive.google.com/file/d/1_DGu--sR9e3zk5KfEgiABvp3GZ5hhaec/view?usp=sharing"  />
 </div>
 <div align="center">
-  <img height="150" src="https://drive.google.com/file/d/1As8TrpTOyH5bBA0xGOQNrZcthaVX3JMb/view?usp=drive_link"  />
+  <img height="150" src="https://drive.google.com/file/d/1As8TrpTOyH5bBA0xGOQNrZcthaVX3JMb/view?usp=sharing"  />
 </div>
 
 ## ÍNDICE INVERTIDO DE BIGRAMAS
