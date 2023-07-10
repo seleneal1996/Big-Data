@@ -28,6 +28,8 @@ Usaremos contenedores Docker como máquinas virtuales con bajo overhead
 <div align="center">
   <img height="150" src="https://drive.google.com/file/d/1OdvSHB2JeKwHlPgklIz1M2UvUfvhAbzU/view?usp=sharing"  />
 </div>
+![arquitectura](./Laboratorio 3/resultados/arquitectura.png)
+
 - Abre un terminal en esa carpeta y construye la imagen ejecutando
 ```bash
   $docker build -t hadoop-base-image 
