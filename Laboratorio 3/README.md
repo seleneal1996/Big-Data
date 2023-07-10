@@ -162,6 +162,12 @@ hadoop jar PasswordChecker.jar PasswordChecker /user/hduser/lab02/pwnedPass/inpu
 <div align="center">
   <img height="200" src="https://github.com/seleneal1996/Big-Data/blob/main/Laboratorio%203/resultados/Screenshot%20from%202023-07-09%2021-10-21.png"  />
 </div>
+
+<div align="center">
+  <img height="200" src="https://github.com/seleneal1996/Big-Data/blob/main/Laboratorio%203/resultados/Screenshot%20from%202023-07-09%2022-14-09.png"  />
+</div>
+
+
 ### Linea de comando
 
 - `hadoop jar`: Indica que se va a ejecutar un programa Hadoop en el clúster.
