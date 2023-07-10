@@ -138,6 +138,27 @@ Usa el siguiente comando:
 ```bash
 $hadoop jar invertedindex.jar InvertedIndex /user/hduser/lab02/fulldata /user/hduser/lab02/output_fulldata
 ```
+## SEGURIDAD
+El objetivo de esta tarea es crear un programa con MapReduce que tome una contraseña como entrada, realice un hash SHA-1 y reporte (1) si la contraseña está o no en la base de datos y (2) cuántas veces ha sido usada antes (ese es el número que viene después del hash SHA-1, separado por el carácter de dos puntos)
+
+### Ejecutar la segunda tarea
+```bash
+hadoop com.sun.tools.javac.Main PasswordChecker.java
+jar cf PasswordChecker.jar PasswordChecker*.class
+```
+
+### Generar resultados
+```bash
+hadoop jar PasswordChecker.jar PasswordChecker /user/hduser/lab02/pwnedPass/inputFilePass.txt /user/hduser/lab02/pwnedPass/inputText.txt /user/hduser/lab02/results03
+```
+### Linea de comando
+
+- `hadoop jar`: Indica que se va a ejecutar un programa Hadoop en el clúster.
+- `PasswordChecker.jar`: Es el archivo JAR que contiene el programa `PasswordChecker` y sus dependencias.
+- `PasswordChecker`: Es el nombre de la clase principal que contiene el método `main` del programa.
+- `/user/hduser/lab02/pwnedPass/inputFilePass.txt`: Es la ruta del archivo de entrada que contiene la base de datos de contraseñas.
+- `/user/hduser/lab02/pwnedPass/inputText.txt`: Es la ruta del archivo de entrada que contiene las contraseñas a verificar.
+- `/user/hduser/lab02/results03`: Es la ruta del directorio de salida donde se almacenarán los resultados del procesamiento.
 
 ## Integrantes
 - Barrios Cornejo, Selene
