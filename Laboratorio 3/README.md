@@ -26,9 +26,8 @@ Usaremos contenedores Docker como máquinas virtuales con bajo overhead
 
 - Iniciar el Docker Desktop
 <div align="center">
-  <img height="150" src="https://drive.google.com/file/d/1OdvSHB2JeKwHlPgklIz1M2UvUfvhAbzU/view?usp=sharing"  />
+  <img height="150" src="https://github.com/seleneal1996/Big-Data/blob/main/Laboratorio%203/resultados/arquitectura.png?raw=true"  />
 </div>
-![arquitectura](./Laboratorio 3/resultados/arquitectura.png)
 
 - Abre un terminal en esa carpeta y construye la imagen ejecutando
 ```bash
