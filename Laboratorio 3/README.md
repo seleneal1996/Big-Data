@@ -25,6 +25,9 @@ Usaremos contenedores Docker como máquinas virtuales con bajo overhead
 ### Instalación base de Hadoop con Docker
 
 - Iniciar el Docker Desktop
+<div align="center">
+  <img height="150" src="https://drive.google.com/file/d/1OdvSHB2JeKwHlPgklIz1M2UvUfvhAbzU/view?usp=drive_link"  />
+</div>
 - Abre un terminal en esa carpeta y construye la imagen ejecutando
 ```bash
   $docker build -t hadoop-base-image 
@@ -34,6 +37,9 @@ Usaremos contenedores Docker como máquinas virtuales con bajo overhead
 ```bash
   $docker image ls
 ```
+<div align="center">
+  <img height="150" src="https://drive.google.com/file/d/1gYbc82rgzOOU0U1zRL0EZXiHkgDN7jhx/view?usp=drive_link"  />
+</div>
 ### Creación de la imagen para el NameNode
 - Examina también los ficheros dentro de la carpeta
 ```bash
@@ -93,6 +99,12 @@ $docker container run --rm --init --detach --name dnnm2 --network=hadoop-net --h
 $docker container run --rm --init --detach --name dnnm3 --network=hadoop-net --hostname dnnm3 dnnm-image
 ```
 Acceder a los interfaces web del NameNode y del ResourceManager y comprobar que se han registrado los 4 workers
+<div align="center">
+  <img height="150" src="https://drive.google.com/file/d/1_DGu--sR9e3zk5KfEgiABvp3GZ5hhaec/view?usp=drive_link"  />
+</div>
+<div align="center">
+  <img height="150" src="https://drive.google.com/file/d/1As8TrpTOyH5bBA0xGOQNrZcthaVX3JMb/view?usp=drive_link"  />
+</div>
 
 ## ÍNDICE INVERTIDO DE BIGRAMAS
 El objetivo de esta tarea es generar un índice invertido que mapee cada bigrama a una lista de documentos donde aparece junto con la frecuencia de aparición en cada documento. Este enfoque utiliza el paradigma MapReduce para procesar eficientemente grandes conjuntos de datos distribuidos.
