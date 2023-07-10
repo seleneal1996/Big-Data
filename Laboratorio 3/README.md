@@ -26,7 +26,7 @@ Usaremos contenedores Docker como máquinas virtuales con bajo overhead
 
 - Iniciar el Docker Desktop
 <div align="center">
-  <img height="150" src="https://github.com/seleneal1996/Big-Data/blob/main/Laboratorio%203/resultados/arquitectura.png?raw=true"  />
+  <img height="250" src="https://github.com/seleneal1996/Big-Data/blob/main/Laboratorio%203/resultados/arquitectura.png?raw=true"  />
 </div>
 
 - Abre un terminal en esa carpeta y construye la imagen ejecutando
@@ -101,10 +101,10 @@ $docker container run --rm --init --detach --name dnnm3 --network=hadoop-net --h
 ```
 Acceder a los interfaces web del NameNode y del ResourceManager y comprobar que se han registrado los 4 workers
 <div align="center">
-  <img height="150" src="https://github.com/seleneal1996/Big-Data/blob/main/Laboratorio%203/resultados/nodos.png?raw=true"  />
+  <img height="300" src="https://github.com/seleneal1996/Big-Data/blob/main/Laboratorio%203/resultados/nodos.png?raw=true"  />
 </div>
 <div align="center">
-  <img height="150" src="https://github.com/seleneal1996/Big-Data/blob/main/Laboratorio%203/resultados/hadoop.png?raw=true"  />
+  <img height="200" src="https://github.com/seleneal1996/Big-Data/blob/main/Laboratorio%203/resultados/hadoop.png?raw=true"  />
 </div>
 
 ## ÍNDICE INVERTIDO DE BIGRAMAS
