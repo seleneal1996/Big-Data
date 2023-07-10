@@ -136,8 +136,12 @@ $ jar cf invertedindex.jar InvertedIndex*.class
 ### Generar resultados
 Usa el siguiente comando:
 ```bash
-$hadoop jar invertedindex.jar InvertedIndex /user/hduser/lab02/fulldata /user/hduser/lab02/output_fulldata
+$hadoop jar invertedindex.jar InvertedIndex /user/hduser/lab02/devdata /user/hduser/lab02/output_bigrams
 ```
+<div align="center">
+  <img height="200" src="https://github.com/seleneal1996/Big-Data/blob/main/Laboratorio%203/resultados/output_bigrams.png"  />
+</div>
+
 ## SEGURIDAD
 El objetivo de esta tarea es crear un programa con MapReduce que tome una contraseña como entrada, realice un hash SHA-1 y reporte (1) si la contraseña está o no en la base de datos y (2) cuántas veces ha sido usada antes (ese es el número que viene después del hash SHA-1, separado por el carácter de dos puntos)
 
