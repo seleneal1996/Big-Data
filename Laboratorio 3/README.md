@@ -89,7 +89,7 @@ resourcemanager-image
 ```
 - Accede al interfaz web del ResourceManager en http://localhost:8088
 <div align="center">
-  <img height="150" src="https://drive.google.com/file/d/1gYbc82rgzOOU0U1zRL0EZXiHkgDN7jhx/view?usp=sharing"  />
+  <img height="150" src="https://github.com/seleneal1996/Big-Data/blob/main/Laboratorio%203/resultados/imagels.png?raw=true"  />
 </div>
 ### Ejecución de los DataNodes/NodeManagers
 
@@ -101,10 +101,10 @@ $docker container run --rm --init --detach --name dnnm3 --network=hadoop-net --h
 ```
 Acceder a los interfaces web del NameNode y del ResourceManager y comprobar que se han registrado los 4 workers
 <div align="center">
-  <img height="150" src="https://drive.google.com/file/d/1_DGu--sR9e3zk5KfEgiABvp3GZ5hhaec/view?usp=sharing"  />
+  <img height="150" src="https://github.com/seleneal1996/Big-Data/blob/main/Laboratorio%203/resultados/nodos.png?raw=true"  />
 </div>
 <div align="center">
-  <img height="150" src="https://drive.google.com/file/d/1As8TrpTOyH5bBA0xGOQNrZcthaVX3JMb/view?usp=sharing"  />
+  <img height="150" src="https://github.com/seleneal1996/Big-Data/blob/main/Laboratorio%203/resultados/hadoop.png?raw=true"  />
 </div>
 
 ## ÍNDICE INVERTIDO DE BIGRAMAS
